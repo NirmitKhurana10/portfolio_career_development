@@ -24,32 +24,21 @@ function typeLoop() {
     charIndex--;
     setTimeout(typeLoop, 50);
   } else {
-    if (!isDeleting) {
-      isDeleting = true;
-      setTimeout(typeLoop, 1000);
-    } else {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      setTimeout(typeLoop, 500);
-    }
+    isDeleting = !isDeleting;
+    if (!isDeleting) roleIndex = (roleIndex + 1) % roles.length;
+    setTimeout(typeLoop, 500);
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  typeLoop();
-  scrollObserver();
-  scrollToTopButtonHandler();
-});
 
 // Scroll-to-top functionality
 function scrollToTopButtonHandler() {
   const btn = document.getElementById("backToTop");
   btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  window.onscroll = () => {
+  window.addEventListener("scroll", () => {
     btn.style.display = window.scrollY > 300 ? "block" : "none";
     highlightSectionInNav();
-  };
+  });
 }
 
 // Nav section highlighting on scroll
@@ -57,16 +46,19 @@ function highlightSectionInNav() {
   const sections = document.querySelectorAll("main section");
   const navLinks = document.querySelectorAll(".navbar a");
 
-  sections.forEach((section, index) => {
+  sections.forEach((section) => {
     const rect = section.getBoundingClientRect();
     if (rect.top <= 100 && rect.bottom >= 100) {
       navLinks.forEach((link) => link.classList.remove("active"));
-      navLinks[index].classList.add("active");
+      const targetLink = Array.from(navLinks).find((link) =>
+        link.getAttribute("href").includes(`#${section.id}`)
+      );
+      if (targetLink) targetLink.classList.add("active");
     }
   });
 }
 
-// Optional: Intersection observer for smooth fade-ins
+// Optional: Intersection observer for fade-ins
 function scrollObserver() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -79,7 +71,13 @@ function scrollObserver() {
     { threshold: 0.2 }
   );
 
-  document
-    .querySelectorAll("section")
-    .forEach((section) => observer.observe(section));
+  document.querySelectorAll("section").forEach((section) => {
+    observer.observe(section);
+  });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  typeLoop();
+  scrollObserver();
+  scrollToTopButtonHandler();
+});
