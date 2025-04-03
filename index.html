@@ -12,100 +12,136 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <header>
-      <h1 class="typewriter" id="typewriter"></h1>
-      <p>Building data-driven ML solutions with SQL, Python & GenAI</p>
-      <a href="mailto:nirmitkhurana82@gmail.com" class="button">Email Me</a>
-      <a href="https://github.com/NirmitKhurana10" class="button">GitHub</a>
-      <a
-        href="https://www.linkedin.com/in/nirmit-khurana-3852841a6/"
-        class="button"
-        >LinkedIn</a
-      >
+    <nav class="navbar">
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#interests">Interests</a></li>
+      </ul>
+    </nav>
+
+    <header class="header-grid">
+      <div class="intro-text">
+        <h1 id="typewriter"></h1>
+        <p>Building data-driven ML solutions with SQL, Python & GenAI</p>
+        <div class="cta-buttons">
+          <a href="mailto:nirmitkhurana82@gmail.com" class="button">📧 Email</a>
+          <a href="https://github.com/NirmitKhurana10" class="button"
+            >💻 GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/nirmit-khurana-3852841a6/"
+            class="button"
+            >🔗 LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="intro-image">
+        <img
+          src="assets/profile-placeholder.png"
+          alt="Nirmit Khurana"
+          class="profile-pic"
+        />
+      </div>
     </header>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <p><strong>Languages:</strong> Python, C++</p>
-      <p><strong>Databases:</strong> SQL, NoSQL</p>
-      <p>
-        <strong>ML & DL:</strong> TensorFlow, PyTorch, Keras, Sklearn, NLP, RL,
-        Transformers
-      </p>
-      <p>
-        <strong>DevOps/Tools:</strong> Docker, Kubernetes, Git, GCP, Azure,
-        Agile
-      </p>
-    </section>
+    <main>
+      <section id="skills" class="section-grid">
+        <h2>🛠️ Technical Skills</h2>
+        <div class="grid">
+          <div><strong>Languages:</strong> Python, C++</div>
+          <div><strong>Databases:</strong> SQL, NoSQL</div>
+          <div>
+            <strong>ML & DL:</strong> TensorFlow, PyTorch, Keras, Sklearn, NLP,
+            RL, Transformers
+          </div>
+          <div>
+            <strong>DevOps/Tools:</strong> Docker, Kubernetes, Git, GCP, Azure,
+            Agile
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Sorting Algo Visualizer:</strong> Built with Python and
-          Tkinter, offers algorithm selection, speed, and array size control.
-        </li>
-        <li>
-          <strong>BlogifyX:</strong> Decentralized blog platform with blockchain
-          & smart contracts ensuring ownership and authenticity.
-        </li>
-        <li>
-          <strong>Crypto-Arb-X:</strong> AI crypto trader using LSTM & RL with
-          FastAPI + Next.js dashboard for real-time insights.
-        </li>
-      </ul>
-    </section>
+      <section id="projects">
+        <h2>💼 Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Sorting Algo Visualizer</h3>
+            <p>
+              Python/Tkinter visual tool with sorting speed and array control.
+            </p>
+          </div>
+          <div class="card">
+            <h3>BlogifyX</h3>
+            <p>
+              Blockchain blog platform with decentralized content ownership &
+              monetization.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Crypto-Arb-X</h3>
+            <p>
+              LSTM + RL powered arbitrage trading system with FastAPI backend
+              and Next.js dashboard.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <p><strong>Associate Software Developer, Decimal Technologies</strong></p>
-      <ul>
-        <li>Managed SQL databases for 20+ client reports</li>
-        <li>Analyzed 20+ issues daily using logs & JSON</li>
-        <li>Optimized SQL for testing environments</li>
-        <li>Trained 100+ staff on no-code/low-code tools</li>
-      </ul>
-      <p><strong>Implementation Consultant, AVON Technologies</strong></p>
-      <ul>
-        <li>Improved project delivery speed by 20%</li>
-        <li>Used Jython in Agile setups for client-focused improvements</li>
-      </ul>
-    </section>
+      <section id="experience" class="section-grid">
+        <h2>👨‍💻 Work Experience</h2>
+        <div class="grid">
+          <div>
+            <h3>Associate Software Developer – Decimal Technologies</h3>
+            <ul>
+              <li>Optimized SQL for 20+ client reporting systems</li>
+              <li>Parsed logs & JSON for resolving 20+ daily issues</li>
+              <li>
+                Led training sessions for 100+ employees on low-code API tools
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Implementation Consultant – AVON Technologies</h3>
+            <ul>
+              <li>Improved sprint delivery by 20% in Agile teams</li>
+              <li>Enhanced software features with Jython scripts</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Education</h2>
-      <p>
-        <strong>George Brown College:</strong> Postgrad Diploma in Applied AI
-        Solutions
-      </p>
-      <p>
-        <strong>York University:</strong> Postgrad Diploma in Backend &
-        Blockchain Development
-      </p>
-      <p><strong>GGSIPU:</strong> Bachelor's in Computer Applications</p>
-    </section>
+      <section id="education" class="section-grid">
+        <h2>🎓 Education</h2>
+        <div class="grid">
+          <div>
+            <strong>George Brown College:</strong> PG Diploma in Applied AI
+            Solutions
+          </div>
+          <div>
+            <strong>York University:</strong> PG Diploma in Backend & Blockchain
+            Development
+          </div>
+          <div><strong>GGSIU:</strong> Bachelor's in Computer Applications</div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Fun Facts & Interests</h2>
-      <ul>
-        <li>Huge football fan ⚽</li>
-        <li>Love building side projects and contributing to open-source</li>
-        <li>Enjoy deep tech convos, especially around AI and blockchain</li>
-      </ul>
-    </section>
+      <section id="interests">
+        <h2>💡 Fun Facts & Interests</h2>
+        <ul>
+          <li>Football lover ⚽</li>
+          <li>Enjoy building cool tech & open-source contributions</li>
+          <li>Love discussing AI, Blockchain, and future tech</li>
+        </ul>
+      </section>
+    </main>
 
-    <!-- Back to Top Button -->
-    <button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
-
-    <!-- Resume Download -->
-    <div style="text-align: center; margin: 2rem 0">
-      <a href="assets/Nirmit_Khurana_Resume.pdf" download class="button"
-        >Download Resume</a
-      >
-    </div>
+    <button id="backToTop" title="Go to top">⬆</button>
 
     <footer>
-      &copy; 2024 Nirmit Khurana. Built with ❤️ using HTML, CSS, and JS.
+      &copy; 2024 Nirmit Khurana. Built with ❤️ using HTML, CSS, and JavaScript.
     </footer>
   </body>
 </html>
