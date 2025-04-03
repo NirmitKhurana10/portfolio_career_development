@@ -58,7 +58,7 @@ function highlightSectionInNav() {
   });
 }
 
-// Optional: Intersection observer for fade-ins
+// Fade-in scroll animation
 function scrollObserver() {
   const observer = new IntersectionObserver(
     (entries) => {
